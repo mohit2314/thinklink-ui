@@ -1,7 +1,7 @@
 <template>
   <b-container class="dashboard__container">
     <!-- Header row -->
-    <b-row>
+    <b-row class="mb-4">
       <div class="dashboard__header-row">
         <span class="header__title">Overview</span>
         <span
@@ -12,18 +12,55 @@
         >
       </div>
     </b-row>
+    <!-- Status Card row -->
+    <b-row>
+      <div class="status__card-row">
+        <StatusCard v-for="(card, i) in statusCardList" :key="i" :card="card" />
+      </div>
+    </b-row>
   </b-container>
 </template>
 
 <script>
+import StatusCard from "./dashboard-section/StatusCard.vue";
 export default {
-  components: {},
+  components: { StatusCard },
+  data() {
+    return {
+      statusCardList: [
+        {
+          title: "Open orders",
+          icon: "basket2",
+          value: 239,
+          color: "#ffbf61",
+        },
+        {
+          title: "Orders in transit",
+          icon: "truck",
+          value: 126,
+          color: "#618dFF",
+        },
+        {
+          title: "Fulfilled orders",
+          icon: "bag-check",
+          value: "1,254",
+          color: "#40db6b",
+        },
+        {
+          title: "Cancelled orders",
+          icon: "x-circle",
+          value: 35,
+          color: `#FF5555`,
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss">
 .dashboard__container {
-  padding: 16px;
+  padding: 24px 34px;
 }
 .dashboard__header-row {
   display: flex;
@@ -50,5 +87,11 @@ export default {
       margin-right: 8px;
     }
   }
+}
+.status__card-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 30px;
 }
 </style>
