@@ -8,9 +8,9 @@
   </div>
 </template>
 <script>
-import Navbar from "@/components/Navbar.vue";
-import LeftSidebar from "@/components/LeftSidebar.vue";
-import DashboardSection from "@/components/DashboardSection.vue";
+import Navbar from '@/components/Navbar.vue';
+import LeftSidebar from '@/components/LeftSidebar.vue';
+import DashboardSection from '@/components/DashboardSection.vue';
 export default {
   components: {
     Navbar,
@@ -24,5 +24,6 @@ export default {
 .dashboard__layout {
   display: flex;
   width: 100%;
+  // background: #E5E5E5;
 }
 </style>

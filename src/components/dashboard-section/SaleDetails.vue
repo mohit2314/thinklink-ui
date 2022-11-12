@@ -54,6 +54,17 @@ export default {};
 </script>
 
 <style lang="scss">
+.section__heading-row {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Dark color */
+
+  color: #262730;
+  margin: 24px 0 16px 0;
+}
 .sales__card {
   border: 1px solid #fff2ee;
   border-radius: 4px;

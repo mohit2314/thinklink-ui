@@ -5,10 +5,7 @@
       <div class="dashboard__header-row">
         <span class="header__title">Overview</span>
         <span
-          ><b-button class="header__cta-btn"
-            ><b-icon class="plus-icon" icon="plus-circle"></b-icon> ADD NEW
-            WINE</b-button
-          ></span
+          ><b-button class="header__cta-btn"><b-icon class="plus-icon" icon="plus-circle"></b-icon> ADD NEW WINE</b-button></span
         >
       </div>
     </b-row>
@@ -24,41 +21,49 @@
         <SaleDetails />
       </div>
     </b-row>
+    <!-- Inventory Section -->
+    <b-row>
+      <div>
+        <InventorySection />
+      </div>
+    </b-row>
   </b-container>
 </template>
 
 <script>
-import StatusCard from "./dashboard-section/StatusCard.vue";
-import SaleDetails from "./dashboard-section/SaleDetails.vue";
+import StatusCard from './dashboard-section/StatusCard.vue';
+import SaleDetails from './dashboard-section/SaleDetails.vue';
+import InventorySection from './dashboard-section/InventorySection.vue';
 export default {
   components: {
     StatusCard,
     SaleDetails,
+    InventorySection,
   },
   data() {
     return {
       statusCardList: [
         {
-          title: "Open orders",
-          icon: "basket2",
+          title: 'Open orders',
+          icon: 'basket2',
           value: 239,
-          color: "#ffbf61",
+          color: '#ffbf61',
         },
         {
-          title: "Orders in transit",
-          icon: "truck",
+          title: 'Orders in transit',
+          icon: 'truck',
           value: 126,
-          color: "#618dFF",
+          color: '#618dFF',
         },
         {
-          title: "Fulfilled orders",
-          icon: "bag-check",
-          value: "1,254",
-          color: "#40db6b",
+          title: 'Fulfilled orders',
+          icon: 'bag-check',
+          value: '1,254',
+          color: '#40db6b',
         },
         {
-          title: "Cancelled orders",
-          icon: "x-circle",
+          title: 'Cancelled orders',
+          icon: 'x-circle',
           value: 35,
           color: `#FF5555`,
         },
