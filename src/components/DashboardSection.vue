@@ -18,13 +18,23 @@
         <StatusCard v-for="(card, i) in statusCardList" :key="i" :card="card" />
       </div>
     </b-row>
+    <!-- Sales details Section -->
+    <b-row>
+      <div>
+        <SaleDetails />
+      </div>
+    </b-row>
   </b-container>
 </template>
 
 <script>
 import StatusCard from "./dashboard-section/StatusCard.vue";
+import SaleDetails from "./dashboard-section/SaleDetails.vue";
 export default {
-  components: { StatusCard },
+  components: {
+    StatusCard,
+    SaleDetails,
+  },
   data() {
     return {
       statusCardList: [
