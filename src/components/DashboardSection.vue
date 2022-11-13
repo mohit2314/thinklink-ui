@@ -105,7 +105,7 @@ export default {
     padding: 8px 20px;
     border-radius: 4px;
     max-width: 182px;
-    margin-right: 80px;
+    margin-right: 28px;
     .plus-icon {
       margin-right: 8px;
     }

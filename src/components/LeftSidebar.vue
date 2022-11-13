@@ -65,6 +65,8 @@ export default {
   // justify-content: space-between;
   position: relative;
   .sidebar__list-item {
+    min-width: 220px;
+
     cursor: pointer;
     padding: 12px;
     display: flex;
