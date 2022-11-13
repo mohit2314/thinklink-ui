@@ -87,7 +87,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
-  max-width: 920px;
+  // max-width: 920px;
 
   width: 100%;
 
