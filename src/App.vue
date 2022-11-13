@@ -21,6 +21,10 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+  font-family: 'Open Sans';
+  font-style: normal;
+}
 .dashboard__layout {
   display: flex;
   width: 100%;
