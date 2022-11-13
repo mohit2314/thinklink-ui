@@ -3,10 +3,10 @@
     <!-- Header row -->
     <b-row class="mb-4">
       <div class="dashboard__header-row">
-        <span class="header__title">Overview</span>
-        <span
-          ><b-button class="header__cta-btn"><b-icon class="plus-icon" icon="plus-circle"></b-icon> ADD NEW WINE</b-button></span
-        >
+        <div class="header__title">Overview</div>
+        <div>
+          <b-button class="header__cta-btn"><b-icon class="plus-icon" icon="plus-circle"></b-icon> ADD NEW WINE</b-button>
+        </div>
       </div>
     </b-row>
     <!-- Status Card row -->
@@ -76,12 +76,19 @@ export default {
 <style lang="scss">
 .dashboard__container {
   padding: 24px 34px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  max-width: 1220px !important;
 }
 .dashboard__header-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
+  max-width: 920px;
+
   width: 100%;
 
   .header__title {
@@ -98,6 +105,7 @@ export default {
     padding: 8px 20px;
     border-radius: 4px;
     max-width: 182px;
+    margin-right: 80px;
     .plus-icon {
       margin-right: 8px;
     }

@@ -2,7 +2,7 @@
   <div class="inventory__section">
     <div class="section__heading-row">Inventory</div>
     <div class="inventory__table">
-      <b-table :items="items" :fields="fields" selectable select-mode="multi" @row-selected="onRowSelected" label-sort-asc="" label-sort-desc="" :no-sort-reset="false" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" :sort-direction="sortDirection" stacked="md" show-empty small @filtered="onFiltered">
+      <b-table :responsive="true" selected-variant="light" ref="selectableTable" :items="items" :fields="fields" selectable select-mode="multi" @row-selected="onRowSelected" label-sort-asc="" label-sort-desc="" :no-sort-reset="false" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc" :sort-direction="sortDirection" stacked="md" show-empty small @filtered="onFiltered">
         <!-- <template #cell(name)="row"> {{ row.value.first }} {{ row.value.last }} </template> -->
         <!-- Example scoped slot for select state illustrative purposes -->
         <template #cell(select)="{ rowSelected }" style="height: 100%">
@@ -215,6 +215,10 @@ export default {
   mounted() {
     // Set the initial number of items
     this.totalRows = this.items.length;
+    this.$refs.selectableTable.selectRow(1);
+    this.$refs.selectableTable.selectRow(2);
+    this.$refs.selectableTable.toggleDetailsFactory('row-details', 2);
+    console.log(this.$refs.selectableTable);
   },
   methods: {
     info(item, index, button) {
