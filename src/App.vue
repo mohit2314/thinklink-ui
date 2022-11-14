@@ -2,8 +2,10 @@
   <div class="app">
     <Navbar />
     <div class="dashboard__layout">
-      <LeftSidebar />
-      <DashboardSection />
+      <LeftSidebar class="sidebar__section" style="position: fixed; top: 56px; max-width: 250px; width: 350px; height: 100%" />
+      <div class="dashboard__section">
+        <DashboardSection style="margin-top: 100px" />
+      </div>
     </div>
   </div>
 </template>
@@ -33,5 +35,15 @@ export default {
   width: 100%;
   height: 100%;
   // background: #E5E5E5;
+  width: 100%;
+  .sidebar__section {
+    width: 20%;
+  }
+  .dashboard__section {
+    width: 100%;
+    margin-left: 256px;
+    display: flex;
+    justify-content: center;
+  }
 }
 </style>

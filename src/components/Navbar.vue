@@ -41,6 +41,9 @@ export default {
   font-size: 16px;
   color: #fff;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   .nav__left-section {
     width: 50%;
     display: flex;
