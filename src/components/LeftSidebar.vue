@@ -81,7 +81,7 @@ export default {
   }
   .sidebar__footer {
     position: absolute;
-    bottom: 42px;
+    bottom: 98px;
     text-align: left;
     left: 24px;
     .brand {
@@ -101,7 +101,7 @@ export default {
   }
   .sidebar__collapse {
     position: absolute;
-    bottom: 46px;
+    bottom: 108px;
     text-align: center;
     right: -10px;
     background-color: #ef4859;

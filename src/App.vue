@@ -4,7 +4,7 @@
     <div class="dashboard__layout">
       <LeftSidebar class="sidebar__section" style="position: fixed; top: 56px; max-width: 250px; width: 350px; height: 100%" />
       <div class="dashboard__section">
-        <DashboardSection style="margin-top: 100px" />
+        <DashboardSection style="margin-top: 60px" />
       </div>
     </div>
   </div>
