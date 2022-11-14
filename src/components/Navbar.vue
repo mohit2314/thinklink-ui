@@ -4,12 +4,8 @@
       <div class="nav__brand-title">
         <img src="@/assets/brand-title.png" alt="" />
       </div>
-      <div>
-        <b-form-input
-          size="sm"
-          class="mr-sm-2 nav__search"
-          placeholder="Search wines, customers here..."
-        ></b-form-input>
+      <div class="search__wrapper">
+        <b-form-input size="sm" class="mr-sm-2 nav__search" placeholder="Search wines, customers here..."></b-form-input>
       </div>
     </div>
 
@@ -44,12 +40,17 @@ export default {
   align-items: center;
   font-size: 16px;
   color: #fff;
+  width: 100%;
   .nav__left-section {
-    width: 40%;
+    width: 50%;
     display: flex;
+    gap: 20px;
     justify-content: space-between;
+    .search__wrapper {
+      width: 60%;
+    }
     .nav__search {
-      width: 354px;
+      max-width: 354px;
     }
   }
   .nav__right-section {

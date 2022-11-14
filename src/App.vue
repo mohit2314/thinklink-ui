@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <Navbar />
     <div class="dashboard__layout">
       <LeftSidebar />
@@ -24,6 +24,9 @@ export default {
 * {
   font-family: 'Open Sans';
   font-style: normal;
+}
+.app {
+  width: 100%;
 }
 .dashboard__layout {
   display: flex;
